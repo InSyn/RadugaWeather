@@ -1,0 +1,12 @@
+.footer{
+    height: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    transition: 0.4s;
+}
+.footer:hover{
+    height: 30px;
+}

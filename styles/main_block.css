@@ -1,0 +1,16 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100% - 40px);
+}
+.main-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(/img/object_main_logo_IMG_5893.jpg) center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}

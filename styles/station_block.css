@@ -1,0 +1,36 @@
+.station{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 32px;
+    font-family: "Arial";
+    position: relative;
+    border: solid #cc0404 1px;
+}
+.right-container{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 55%;
+}
+.station-name{
+    position: absolute;
+    left: 10%;
+    top: 20px;
+}
+.stadium-station{
+    height: 100%;
+    width: 45%;
+    border-right: 0px;
+}
+.top-station{
+    height: 50%;
+    width: 100%;
+    border-bottom: 0px;
+}
+.bottom-station{
+    height: 50%;
+    width: 100%;
+}

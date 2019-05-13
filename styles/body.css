@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+}
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    color: #222;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+}

@@ -1,38 +1,50 @@
 window.onload = function () {
 
-let hh = document.querySelector(".hh");
-let mm = document.querySelector(".mm");
-let ss = document.querySelector(".ss");
+    let hh = document.querySelector(".hh");
+    let mm = document.querySelector(".mm");
+    let ss = document.querySelector(".ss");
 
-function clockUpdate(){
-    let currentTime = new Date();
+    function clockUpdate(){
+        let currentTime = new Date();
 
-    let hours = currentTime.getHours();
-    if (hours<10){
-        hours = "0"+hours
+        let hours = currentTime.getHours();
+        if (hours<10){
+            hours = "0"+hours
+        }
+
+        let minutes = currentTime.getMinutes();
+        if (minutes<10){
+            minutes = "0"+minutes
+        }
+
+        let seconds = currentTime.getSeconds();
+        if (seconds<10){
+            seconds = "0"+seconds
+        }
+
+        hh.innerHTML = hours.toString();
+        mm.innerHTML = minutes.toString();
+        ss.innerHTML = seconds.toString();
     }
 
-    let minutes = currentTime.getMinutes();
-    if (minutes<10){
-        minutes = "0"+minutes
+    function clockStart(){
+        setInterval(clockUpdate, 1000);
     }
 
-    let seconds = currentTime.getSeconds();
-    if (seconds<10){
-        seconds = "0"+seconds
-    }
 
-    hh.innerHTML = hours.toString();
-    mm.innerHTML = minutes.toString();
-    ss.innerHTML = seconds.toString();
-}
+    clockUpdate();
+    clockStart();
 
-function clockStart(){
-    setInterval(clockUpdate, 1000);
-}
+    let footerArrow = document.querySelector(".arrow-svg");
 
+    console.log(footerArrow);
 
-clockUpdate();
-clockStart();
+    footerArrow.addEventListener("mouseover", function () {
+        footerArrow.classList.toggle("hovered")
+    });
+
+    footerArrow.addEventListener("mouseout", function () {
+        footerArrow.classList.toggle("hovered")
+    });
 
 };

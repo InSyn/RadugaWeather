@@ -5,15 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no,
+          initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Raduga Weather</title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="js/vue.js"></script>
     <script src="js/main.js"></script>
 </head>
 
-<body>
+<body class="body">
 
     <div class="main-wrapper">
 
@@ -112,7 +113,27 @@
 
         </div>
 
-        <div class="footer"></div>
+        <div class="footer-wrapper">
+            <svg class="arrow-container">
+                <polygon class="arrow-svg"
+                         points="0,30 25,0 50,30">
+                </polygon>
+            </svg>
+            <div class="footer">
+                <div class="php-content">
+                    <?php
+                        include_once ('data/curl.php');
+
+                        $c = curl::app('http://62.213.36.254')
+                            ->set(CURLOPT_HEADER, 1);
+
+                        $data = $c->request('all_main.php?lg_ex=meteo&pw_ex=krsk2019&butn=Вход');
+
+                        echo $data['html'];
+                    ?>
+                </div>
+            </div>
+        </div>
 
     </div>
 

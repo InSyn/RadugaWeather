@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    z-index: 1000;
+    height: 40px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #333;
+    justify-content: center;
+}
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 2rem;
+    font-family: Arial;
+}
